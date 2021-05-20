@@ -7,7 +7,7 @@
 import org.jetbrains.kotlin.gradle.tasks.KotlinCompile
 
 /* =============== PROJECT SETTINGS =============== */
-val projectPackage: String = "com.it_finne.{PROJECT_NAME_LOWER_CASE}"
+val projectPackage: String = "com.it_finne.watering"
 val projectMainClass: String = "AppKt"
 /* ================================================ */
 
@@ -69,7 +69,7 @@ tasks.wrapper {
 }
 
 flyway {
-    url = System.getenv("{PROJECT_NAME_UPPER_CASE}_FLYWAY_URL")
-    user = System.getenv("{PROJECT_NAME_UPPER_CASE}_FLYWAY_USER")
-    password = System.getenv("{PROJECT_NAME_UPPER_CASE}_FLYWAY_PASSWORD")
+    url = System.getenv("WATERING_FLYWAY_URL")
+    user = System.getenv("WATERING_FLYWAY_USER")
+    password = System.getenv("WATERING_FLYWAY_PASSWORD")
 }

@@ -1,5 +1,6 @@
 package com.it_finne.watering
 
+import com.it_finne.watering.application.command.AutoWatering
 import com.it_finne.watering.application.command.Prefix
 import com.it_finne.watering.config.Application
 import com.it_finne.watering.application.listener.CommandExceptionListener
@@ -28,7 +29,8 @@ class BOT {
             .setActivity(Activity.playing("!help"))
             .setOwnerId(Application.configuration.discordbot.ownerId)
             .addCommands(
-                Prefix()
+                Prefix(),
+                AutoWatering()
             )
             .setGuildSettingsManager(GuildSettingsManager())
             .setEmojis(

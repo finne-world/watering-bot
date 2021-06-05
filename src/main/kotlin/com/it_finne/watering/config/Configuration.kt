@@ -2,6 +2,7 @@ package com.it_finne.watering.config
 
 import com.charleskorn.kaml.Yaml
 import com.it_finne.watering.application.constant.ApplicationMode
+import com.it_finne.watering.config.property.Api
 import com.it_finne.watering.config.property.Database
 import com.it_finne.watering.config.property.DiscordBot
 import kotlinx.serialization.Serializable
@@ -9,7 +10,8 @@ import kotlinx.serialization.Serializable
 @Serializable
 data class Configuration(
     val discordbot: DiscordBot,
-    val database: Database
+    val database: Database,
+    val api: Api
 ) {
     companion object {
         fun load(applicationMode: ApplicationMode): Configuration {

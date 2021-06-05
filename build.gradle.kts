@@ -41,6 +41,8 @@ dependencies {
     implementation(kotlinLogging)
     implementation(logbackClassic)
     implementation(arrowCore)
+    implementation(okHttp3)
+    implementation(jacksonModuleKotlin)
 }
 
 application {

@@ -1,27 +1,37 @@
 package com.it_finne.watering.application.http
 
-import com.it_finne.watering.config.Application
-import com.it_finne.watering.error.CommandErrorException
 import okhttp3.*
 
-class HttpClient(commandName: String) {
+class HttpClient() {
     private val formBuilder: FormBody.Builder = FormBody.Builder()
+    private val requestBuilder: Request.Builder = Request.Builder()
     private val okHttpClient: OkHttpClient = OkHttpClient.Builder().build()
-    private val commandUrl: String = when(commandName){
-        "interval" -> Application.configuration.api.interval
-        "auto_watering" -> Application.configuration.api.autoWatering
-        "init" -> Application.configuration.api.init
-        else -> throw IllegalArgumentException("Could not find the url for the specified command.:$commandName")
-    }
+    private var method: String = ""
 
     fun setParameter(parameter: Map<String,String>): HttpClient {
-        parameter.forEach{ key: String, value: String -> formBuilder.add(key, value) }
+        parameter.forEach{ formBuilder.add(it.key, it.value) }
+        return this
+    }
+
+    fun setUrl(url: String): HttpClient {
+        requestBuilder.url(url)
+        return this
+    }
+
+    fun setMethod(method: String): HttpClient {
+        if (!listOf("POST", "GET").contains(method)) {
+            throw IllegalArgumentException("The http method name is incorrect.")
+        }
+        this.method = method
         return this
     }
 
     fun execute(): Response {
-        val requestBody = formBuilder.build()
-        val request: Request = Request.Builder().url(commandUrl).post(requestBody).build()
+        when (method) {
+            "POST" -> requestBuilder.post(formBuilder.build())
+            // "GET" -> Not implemented yet.
+        }
+        val request = requestBuilder.build()
         return okHttpClient.newCall(request).execute()
     }
 }

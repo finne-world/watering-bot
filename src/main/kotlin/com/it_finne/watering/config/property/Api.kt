@@ -8,5 +8,5 @@ data class Api(
     @SerialName("auto_watering")
     val autoWatering: String,
     val interval: String,
-    val init: String
+    val add: String
 )

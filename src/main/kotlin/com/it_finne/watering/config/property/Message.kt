@@ -5,5 +5,6 @@ import kotlinx.serialization.Serializable
 @Serializable
 data class Message (
      val successfullyAddedDevice: String,
-     val deviceNotSpecified: String
+     val deviceNotSpecified: String,
+     val deviceNameContainsSpace: String
 )

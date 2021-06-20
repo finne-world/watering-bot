@@ -11,9 +11,9 @@ class HttpClient {
     private val okHttpClient: OkHttpClient = OkHttpClient.Builder().build()
 
     private fun request(
-            method: String,
-            url: String,
-            parameter: Array<out Pair<String, String>>? = null
+        method: String,
+        url: String,
+        parameter: Array<out Pair<String, String>>? = null
     ): Response {
         requestBuilder.url(url)
         parameter?.forEach{ formBuilder.add(it.first, it.second) }

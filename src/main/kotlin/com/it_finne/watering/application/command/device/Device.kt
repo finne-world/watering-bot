@@ -1,4 +1,4 @@
-package com.it_finne.watering.application.command.watering.device
+package com.it_finne.watering.application.command.device
 
 import com.jagrosh.jdautilities.command.Command
 import com.jagrosh.jdautilities.command.CommandEvent

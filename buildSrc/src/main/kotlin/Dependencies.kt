@@ -23,3 +23,5 @@ val DependencyHandler.logbackClassic get() = "ch.qos.logback:logback-classic:${V
 val DependencyHandler.arrowCore get() = "io.arrow-kt:arrow-core:${Versions.Dependency.ARROW}"
 val DependencyHandler.okHttp3 get() = "com.squareup.okhttp3:okhttp:${Versions.Dependency.OK_HTTP_3}"
 val DependencyHandler.jacksonModuleKotlin get() = "com.fasterxml.jackson.module:jackson-module-kotlin:${Versions.Dependency.JACKSON}"
+val DependencyHandler.koin get() = "io.insert-koin:koin-core:${Versions.Dependency.KOIN}"
+val DependencyHandler.awsSsm get() = "com.amazonaws:aws-java-sdk-ssm:${Versions.Dependency.AWS_SSM}"

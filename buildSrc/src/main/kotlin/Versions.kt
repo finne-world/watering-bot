@@ -21,5 +21,7 @@ object Versions {
         const val ARROW: String = "0.13.2"
         const val OK_HTTP_3: String = "4.9.1"
         const val JACKSON: String = "2.12.3"
+        const val KOIN: String = "3.1.0"
+        const val AWS_SSM: String =  "1.12.34"
     }
 }

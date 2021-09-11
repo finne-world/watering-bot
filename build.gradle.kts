@@ -43,6 +43,8 @@ dependencies {
     implementation(arrowCore)
     implementation(okHttp3)
     implementation(jacksonModuleKotlin)
+    implementation(koin)
+    implementation(awsSsm)
 }
 
 application {

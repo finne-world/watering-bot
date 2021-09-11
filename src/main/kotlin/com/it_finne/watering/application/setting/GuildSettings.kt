@@ -3,7 +3,7 @@ package com.it_finne.watering.application.setting
 import com.it_finne.watering.application.entity.GuildEntity
 import com.it_finne.watering.application.repository.GuildRepository
 import com.it_finne.watering.error.NotFoundResourceException
-import com.it_finne.watering.lib.extension.getOrThrow
+import com.it_finne.watering.lib.getOrThrow
 import com.jagrosh.jdautilities.command.GuildSettingsManager as GuildSettingsManagerInterface
 import com.jagrosh.jdautilities.command.GuildSettingsProvider
 import net.dv8tion.jda.api.entities.Guild

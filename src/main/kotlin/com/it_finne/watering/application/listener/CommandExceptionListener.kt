@@ -2,6 +2,7 @@ package com.it_finne.watering.application.listener
 
 import com.it_finne.watering.error.CommandErrorException
 import com.it_finne.watering.error.CommandWarningException
+import com.it_finne.watering.error.RefreshTokenExpiresException
 import com.jagrosh.jdautilities.command.Command
 import com.jagrosh.jdautilities.command.CommandEvent
 import com.jagrosh.jdautilities.command.CommandListener
@@ -18,6 +19,9 @@ class CommandExceptionListener(
             }
             is CommandWarningException -> {
                 event.replyWarning(throwable.message)
+            }
+            is RefreshTokenExpiresException -> {
+                event.replyWarning((throwable.message))
             }
             else -> {
                 logger.error(throwable) { "An exception occurred in a command. command=${command.name}, guild=${event.guild.id}" }

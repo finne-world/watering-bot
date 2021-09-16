@@ -1,6 +1,10 @@
 package com.it_finne.watering
 
+<<<<<<< HEAD
 import com.it_finne.watering.application.command.auto_watering.AutoWatering
+=======
+import com.it_finne.watering.application.command.AutoWatering
+>>>>>>> 17ebb819d83a5ac13bcd08bcc6916eff5fc462bb
 import com.it_finne.watering.application.command.Prefix
 import com.it_finne.watering.application.command.watering.Watering
 import com.it_finne.watering.config.Application
@@ -35,8 +39,12 @@ class BOT : KoinComponent{
             .setOwnerId(awsParameterStore.getParameter(Application.configuration.discordbot.ownerId))
             .addCommands(
                 Prefix(),
+<<<<<<< HEAD
                 AutoWatering(),
                 Watering()
+=======
+                AutoWatering()
+>>>>>>> 17ebb819d83a5ac13bcd08bcc6916eff5fc462bb
             )
             .setGuildSettingsManager(GuildSettingsManager())
             .setEmojis(

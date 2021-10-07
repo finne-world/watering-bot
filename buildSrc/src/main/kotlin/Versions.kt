@@ -19,5 +19,12 @@ object Versions {
         const val KOTLIN_LOGGING: String = "1.7.10"
         const val LOGBACK_CLASSIC: String = "1.2.3"
         const val ARROW: String = "0.13.2"
+        const val OK_HTTP_3: String = "4.9.1"
+        const val JACKSON: String = "2.12.3"
+<<<<<<< HEAD
+        const val KOIN: String = "3.1.0"
+        const val AWS_SSM: String =  "1.12.34"
+=======
+>>>>>>> 17ebb819d83a5ac13bcd08bcc6916eff5fc462bb
     }
 }

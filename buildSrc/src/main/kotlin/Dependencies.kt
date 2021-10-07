@@ -21,3 +21,12 @@ val DependencyHandler.hikariCP get() = "com.zaxxer:HikariCP:${Versions.Dependenc
 val DependencyHandler.kotlinLogging get() = "io.github.microutils:kotlin-logging:${Versions.Dependency.KOTLIN_LOGGING}"
 val DependencyHandler.logbackClassic get() = "ch.qos.logback:logback-classic:${Versions.Dependency.LOGBACK_CLASSIC}"
 val DependencyHandler.arrowCore get() = "io.arrow-kt:arrow-core:${Versions.Dependency.ARROW}"
+<<<<<<< HEAD
+val DependencyHandler.okHttp3 get() = "com.squareup.okhttp3:okhttp:${Versions.Dependency.OK_HTTP_3}"
+val DependencyHandler.jacksonModuleKotlin get() = "com.fasterxml.jackson.module:jackson-module-kotlin:${Versions.Dependency.JACKSON}"
+val DependencyHandler.koin get() = "io.insert-koin:koin-core:${Versions.Dependency.KOIN}"
+val DependencyHandler.awsSsm get() = "com.amazonaws:aws-java-sdk-ssm:${Versions.Dependency.AWS_SSM}"
+=======
+val DependencyHandler.okHttp3 get() = "com.squareup.okhttp3:${Versions.Dependency.OK_HTTP_3}"
+val DependencyHandler.jacksonModuleKotlin get() = "com.fasterxml.jackson.module:jackson-module-kotlin:${Versions.Dependency.JACKSON}"
+>>>>>>> 17ebb819d83a5ac13bcd08bcc6916eff5fc462bb

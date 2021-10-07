@@ -41,6 +41,13 @@ dependencies {
     implementation(kotlinLogging)
     implementation(logbackClassic)
     implementation(arrowCore)
+    implementation(okHttp3)
+    implementation(jacksonModuleKotlin)
+<<<<<<< HEAD
+    implementation(koin)
+    implementation(awsSsm)
+=======
+>>>>>>> 17ebb819d83a5ac13bcd08bcc6916eff5fc462bb
 }
 
 application {

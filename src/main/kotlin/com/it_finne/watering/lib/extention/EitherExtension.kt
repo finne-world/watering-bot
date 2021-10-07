@@ -1,4 +1,4 @@
-package com.it_finne.watering.lib.extension
+package com.it_finne.watering.lib
 
 import arrow.core.Either
 import arrow.core.getOrHandle
